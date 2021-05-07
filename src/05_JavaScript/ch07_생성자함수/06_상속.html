@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Rectangle(w, h) {
+            if (w < 0) {
+                throw '가로 길이는 0보다 커야 합니다.';
+            } else {
+                var width = w;
+            }
+            var height = h;
+
+            this.getWidth = function () {
+                return width;
+            };
+            this.getHeight = function () {
+                return height;
+            };
+            this.setWidth = function (w) {
+                if (w < 0) {
+                    throw '가로 길이는 0보다 커야 합니다.';
+                } else {
+                    width = w;
+                }
+            };
+            this.setHeight = function (h) {
+                height = h;
+            }
+        }; // function Rectangle 생성자함수  
+        Rectangle.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        }; // 프로토타입 
+
+        function Square(length) { // 상속 
+            this.base = Rectangle;
+            this.base(length, length);
+        }
+        Square.prototype = Rectangle.prototype;
+
+        var rect = new Rectangle(5, 7);
+        document.write('rect의 넓이: ' + rect.getArea() + '<br>');
+
+        var square = new Square(10);
+        document.write('square의 넓이: ' + square.getArea() + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

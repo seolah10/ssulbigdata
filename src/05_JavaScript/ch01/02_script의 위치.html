@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<!--script가 올 수 있는 위치-->
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script> // 1. head 안
+        document.write('<h2>첫번째 줄: head 내부</h2>')
+    </script>
+</head>
+<body>
+    <h2>두번째 줄 : body 내부 (html태그)</h2>
+    <script> // 2. body 안
+        document.write('<h2>세번째 줄: body 내부(script) </h2>')
+    </script>
+</body>
+</html>
+<script> // 3. html 밖
+    document.write('<h2>네번째 줄: html 밖</h2>')
+</script>

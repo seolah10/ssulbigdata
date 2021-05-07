@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /* A 부분 */
+        function pythagoras(width, height) {
+            function square(x) { // 내부함수: 함수 내부에 선언된 함수 (충돌을 피하기 위해 사용)
+                return x * x;
+            };
+            return Math.sqrt(square(width) + square(height)); // sqrt: 루트 
+        }; 
+    </script>
+    <script>
+        /* B 부분 : 밑변, 높이, 빗변을 받아 직각삼각형 여부 판단 */
+        function square(w, h, hypotenuse) {
+            if (w * w + h * h == hypotenuse * hypotenuse) {
+                return true;
+            } else {
+                return false; // false는 숫자로는 0으로 인식
+            }
+        };
+    </script>
+    <script>
+        alert(pythagoras(3, 4));
+        alert(square(3, 4, 5)); // 내부함수 square는 여기서 인식되지 않는다.
+;    </script>
+</head>
+<body>
+
+</body>
+</html>

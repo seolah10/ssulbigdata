@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var numLiteral = 153;
+        var numObject = new Number(153);
+
+        if (typeof (numLiteral) == 'number') {
+            document.write('numLiteral은 number이다.<br>');
+        } else {
+            document.write('numLiteral은 number가 아니다.<br>');
+        }
+        if (typeof (numObject) == 'number') {
+            document.write('numObject는 number이다.<br>');
+        } else {
+            document.write('numObject는 number가 아니다.<br>');
+        }
+
+        if (numLiteral.constructor == Number) {
+            document.write('numLiteral은 Number이다.<br>');
+        }
+        if (numObject.constructor == Number) {
+            document.write('numObject는 Number이다.<br>');
+        } 
+
+        var obj = { property: 153, name: 'park' };
+        var output = '';
+        output += "hasOwnProperty('name')" + obj.hasOwnProperty('name') + '<br>';
+        output += '반복문으로 열거 가능? (name)' + obj.propertyIsEnumerable('name') + '<br>';
+        output += obj.toString();
+        document.write('<hr>' + output);
+
+        for (var key in obj) {
+            document.write(key + ': ' + obj[key]); // key가 name
+            // document.write(key+':'+obj.key); 
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

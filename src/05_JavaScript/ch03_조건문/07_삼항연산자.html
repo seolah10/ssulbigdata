@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        p{
+            text-align:center;
+        }
+    </style>
+    <script>
+        function chk() {
+            if (!frm.su1.value) {
+                alert('첫번째 수: ');
+                frm.su1.focus();
+                return false;
+            } else if (!frm.su2.value) {
+                alert('두번째 수: ');
+                frm.su2.focus();
+                return false;
+            }
+
+            var n1 = Number(frm.su1.value);
+            var n2 = Number(frm.su2.value);
+            var cha = (n1 > n2) ? (n1 - n2) : (n2 - n1); // 삼항연산자 (큰수에서 작은수를 빼도록 설정)
+
+            if (n1 == n2) {
+                var result = '<p>두 수는 같네요.</p>'
+            } else if (n1 > n2) {
+                var result = '<p>첫번째 수가 ' + cha + '만큼 더 커요.</p>';
+            } else {
+                var result = '<p>두번째 수가 ' + cha + '만큼 더 커요.</p>';
+            }
+
+            document.body.innerHTML += result;
+            newResult = result.substring(0, result.indexOf('</p>'));
+            newResult = newResult.substring(3);
+            frm.su1.value = n1;
+            frm.su2.value = n2;
+            alert(newResult);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <fieldset>
+            <p>
+                <label for="su1">첫번째 수: </label>
+                <input type="number" name="su1" id="su1" />
+            </p>
+            <p>
+                <label for="su2">두번째 수: </label>
+                <input type="number" name="su2" id="su2" />
+            </p>
+            <p>
+                <input type="submit" value="두 수 비교" />
+             </p>
+        </fieldset>
+    </form>
+</body>
+</html>

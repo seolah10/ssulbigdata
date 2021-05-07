@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input:focus{ /* input box를 클릭했을 때 box에 변화주기 */
+            background-color:lightyellow;
+            border:5px solid red;
+        }
+        input:enabled{ 
+            color:green; /* input box에 입력될 글씨 색 변화주기 */
+        }
+        input:disabled{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        이름<input type="text" name="name" /><br />
+        아뒤<input type="text" name="id" /><br />
+        생일<input type="text" name="birth" value="101010"
+                   disabled="disabled" /><br />
+        <input type="submit" />
+    </form>
+</body>
+</html>

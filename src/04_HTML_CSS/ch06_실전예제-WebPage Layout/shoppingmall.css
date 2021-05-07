@@ -1,0 +1,152 @@
+﻿/* * * 페이지 초기화 * * */
+*{
+    margin:0; padding:0;
+}
+a {
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+}
+li {
+    list-style:none;
+}
+/* * * header * * */
+#header .gnb {
+    width:100%;
+    height:30px;
+    background:black;
+}
+#header .gnb ul {
+    width:1000px; 
+    margin:0 auto;
+    overflow:hidden;
+    height:30px;
+    line-height:30px;
+    text-align:center
+}
+#header .gnb ul li {
+    float:left;
+    margin:0 10px;
+}
+#header .gnb ul li a { 
+    color:#FFFFFF;
+    display:block;
+    width:80px; /*전체 1000에서 메뉴하나가 100씩(width80+좌우여백10씩)*/
+}
+#header .logo {
+    border:1px solid lightgray;
+    width:180px; height:100px;
+    text-align:center;
+    line-height:100px;
+    margin:25px auto;
+}
+#header .hitmenu ul {
+    width:1000px; 
+    margin:0 auto 3px;
+    overflow:hidden;
+}
+#header .hitmenu ul li{
+    border:1px solid lightgray;
+    float:right;
+}
+#header .hitmenu ul li:first-child {
+    border-radius: 0 10px 10px 0;
+}
+#header .hitmenu ul li:last-child {
+    border-radius: 10px 0 0 10px;
+}
+#header .hitmenu ul li a{
+    display:block; /* 이걸 하지 않으면 상하패딩이 적용되지 않음 */
+    padding:10px 30px;
+}
+#header .lnb {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+}
+#header .lnb ul {
+    overflow:hidden;
+    width:1000px; 
+    margin:0 auto;
+}
+#header .lnb ul li {
+    float:left;
+    width: 12.5%;
+    text-align:center;
+}
+#content {
+    width:1000px;
+    margin:0 auto;
+}
+/* * * #content .section1 * * */
+#content .section1 {
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+#content .section div {
+    border:1px solid lightgray;
+    float:left;
+    height:400px;
+    box-sizing:border-box;
+}
+#content .section1 .slide_banner {
+    width: 700px;
+}
+#content .section1 .side_banner {
+    width: 300px;
+}
+/* * * #content .section2 * * */
+#content .section2 .hit_product {
+       margin:10px 0;
+}
+#content .section2 .hit_product,
+#content .section2 .md_product {
+    height:400px;
+    line-height:400px;
+    text-align:center;
+    box-sizing:border-box;
+    border:1px solid lightgray;
+}
+#content .section2 .hit_product ul,
+#content .section2 .md_product ul {
+    overflow:hidden;
+}
+#content .section2 .hit_product ul li,
+#content .section2 .md_product ul li {
+    float:left;
+    width:240px; height:400px;
+    margin-right:7px;
+    border:1px solid lightgray;
+    box-sizing:border-box;
+}
+#content .section2 .hit_product ul li:first-child,
+#content .section2 .md_product ul li:first-child {
+    margin-left:7px;
+}
+#footer {
+    width:1000px; height:150px;
+    margin:5px auto;
+    overflow:hidden;
+}
+#footer div:nth-child(1),
+#footer div:nth-child(2),
+#footer div:nth-child(3) {
+    border:1px solid lightgray;
+    float:left;
+    width:33.333%; height:100px;
+    box-sizing:border-box;
+}
+#footer div:nth-child(4) {
+    clear:both;
+    width:1000px; height:30px;
+    line-height:30px; 
+    text-align:center;
+    background-color:#000000;
+    color:#ffffff;
+}
+
+

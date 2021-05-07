@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Student(name, kor, mat, eng, sci) {
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+            this.eng = eng;
+            this.sci = sci;
+
+            this.getSum = function () {
+                return this.kor + this.mat + this.eng + this.sci;
+            };
+            this.getAvg = function () {
+                return this.getSum() / 4;
+            };
+            this.toString = function () {
+                var output = '';
+                for (var key in this) {
+                    if (key != 'toString' && key != 'getSum' && key != 'getAvg') {
+                        output += key + ': ' + this[key] + '<br>';
+                    } else if (key == 'getSum') {
+                        output += '총점: ' + this.getSum() + '<br>';
+                    } else if (key == 'getAvg') {
+                        output += '평균: ' + this[key]() + '<br>';
+                    }
+                }// for
+                return output;
+            }; // toString
+        } // 생성자함수 Student
+        students = [new Student('kim', 99, 88, 77, 66),
+                    new Student('lee', 98, 88, 78, 68),
+                    new Student('park', 95, 94, 93, 92),
+                    new Student('choi', 11, 22, 22, 44)];
+
+        students.pop(); // 마지막 배열방 데이터(choi) 삭제
+
+        students.forEach(function (data, idx) {
+            document.write(idx + '번째 <br>' + data + '<hr>');
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

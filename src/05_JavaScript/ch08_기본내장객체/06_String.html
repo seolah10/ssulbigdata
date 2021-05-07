@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        String.prototype.replaceA = function (oldStr, newStr) {
+            //var s1 = this.split(oldStr); // 'abcd', 'abcd', 'abc'
+            //var s2 = s1.join(newStr);
+            //return s2;
+            return this.split(oldStr).join(newStr)
+        };
+
+        var str = 'abcd@abcd@abc';
+
+        document.write('글씨길이: ' + str.length + '<br>');
+        document.write('글씨추가: ' + str.concat('123') + '<br>');
+        document.write('글씨추출: ' + str.substring(3, 5) + '<br>'); // 3번째부터 5번째 앞까지 추출
+        document.write('글씨추출: ' + str.substr(3, 5) + '<br>'); // 3번째부터 5글자 추출
+        document.write('앞부터 해당글자와 일치하는 위치: ' + str.indexOf('@') + '<br>');
+        document.write('뒤부터 해당글자와 일치하는 위치: ' + str.lastIndexOf('@') + '<br>');
+        document.write('@를 " "로 대체: ' + str.replaceA('@', ' ') + '<br>');
+        document.write('   park의 space 없애기: ' + '   park'.trim() + '<br>');
+        document.write('대문자로 변환: ' + str.toUpperCase() + '<br>');
+        document.write('소문자로 변환: ' + str.toLowerCase() + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

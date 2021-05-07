@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Insert time here.</title>
+    <style>
+        .timeover {
+            background-color: red;
+        }
+        p, h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px 40px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        /* 3단계(숙제)
+        - 문제 5문제를 시간 count down 처리해서
+         몇 초만에 몇점인지 출력 */
+        $(document).ready(function () {
+            // 시간 뿌리기
+            var sec = 0;
+            var id = setInterval(function () {
+                sec++;
+
+                if (sec > 20) {
+                    $('.result').html('<font color = red>' + sec + '초</font> 경과')
+                } else {
+                    $('.result').text(sec + '초 경과');
+                }
+            }, 1000);
+
+            var opArray = ['+', '-', '*', '/'];
+            var n1 = Array(5);
+            var n2 = Array(5);
+            var opIdx = Array(5); 
+            var answer = Array(5);
+
+            $('.n1').each(function (idx, item) {
+                n1[idx] = parseInt(Math.random() * 10); // 0~9
+                $(this).val(n1[idx]);
+                //item.value = n1[idx];
+            });
+            $('.n2').each(function (idx, item) {
+                n2[idx] = parseInt(Math.random() * 9) + 1; // 1~9
+                $(this).val(n2[idx]);
+                //item.value = n2[idx];
+            });
+            $('span').each(function (idx, item) {
+                opIdx[idx] = parseInt(Math.random() * 4);
+                $(this).html('<b>' + opArray[opIdx[idx]] + '</b>');
+                var tempAnswer = [n1[idx] + n2[idx],
+                    n1[idx] - n2[idx],
+                    n1[idx] * n2[idx],
+                    n1[idx] / n2[idx],]
+                answer[idx] = tempAnswer[opIdx[idx]];
+            });
+            $('.hint').text('정답힌트: ' + answer);
+            $('.cal').click(function () {
+                clearInterval(id);
+                var score = 0;
+
+                $('.answer').each(function (idx, item) {
+                    if ($(this).val() != '' && answer[idx] == $(this).val()) {
+                        score += 20;
+                    } else {
+                        $(this).val($(this).val() + ': 오답');
+                    }                  
+                });
+                $('.result').text('점수: ' + score + '점 / 경과시간: ' + sec);
+            }); // click
+
+            $('.reset').click(function () {
+                clearInterval(id);
+                sec = 0; 
+
+                id = setInterval(function () {
+                    sec++;
+                    if (sec > 20) {
+                        $('.result').html('<span class="timeover">' + sec + '초</span> 경과');
+                    } else {
+                        $('.result').text(sec + '초 경과');
+                    }
+                }, 1000); // setInterval
+                $('.n1').each(function (idx, item) {
+                    n1[idx] = parseInt(Math.random() * 10); // 0~9
+                    $(this).val(n1[idx]);
+                    //item.value = n1[idx];
+                });
+                $('.n2').each(function (idx, item) {
+                    n2[idx] = parseInt(Math.random() * 9) + 1; // 1~9
+                    $(this).val(n2[idx]);
+                    //item.value = n2[idx];
+                });
+                $('span').each(function (idx, item) {
+                    opIdx[idx] = parseInt(Math.random() * 4);
+                    $(this).html('<b>' + opArray[opIdx[idx]] + '</b>');
+                    var tempAnswer = [n1[idx] + n2[idx],
+                    n1[idx] - n2[idx],
+                    n1[idx] * n2[idx],
+                    n1[idx] / n2[idx],]
+                    answer[idx] = tempAnswer[opIdx[idx]];
+                });
+                $('.answer').each(function () {
+                    $(this).val('');
+                });
+                $('.result').text('0초 경과');
+                $('.hint').text(answer);
+            }); // reset
+        });
+    </script>
+</head>
+<body>
+    <p>
+        1번 :
+        <input type="text" class="n1" size="5" readonly="readonly" />
+        <span></span>
+        <input type="text" class="n2" size="5" readonly="readonly" /> =
+        <input type="text" class="answer" size="5" placeholder="답" />
+    </p>
+    <p>
+        2번 :
+        <input type="text" class="n1" size="5" readonly="readonly" />
+        <span></span>
+        <input type="text" class="n2" size="5" readonly="readonly" /> =
+        <input type="text" class="answer" size="5" placeholder="답" />
+    </p>
+    <p>
+        3번 :
+        <input type="text" class="n1" size="5" readonly="readonly" />
+        <span></span>
+        <input type="text" class="n2" size="5" readonly="readonly" /> =
+        <input type="text" class="answer" size="5" placeholder="답" />
+    </p>
+    <p>
+        4번 :
+        <input type="text" class="n1" size="5" readonly="readonly" />
+        <span></span>
+        <input type="text" class="n2" size="5" readonly="readonly" /> =
+        <input type="text" class="answer" size="5" placeholder="답" />
+    </p>
+    <p>
+        5번 :
+        <input type="text" class="n1" size="5" readonly="readonly" />
+        <span></span>
+        <input type="text" class="n2" size="5" readonly="readonly" /> =
+        <input type="text" class="answer" size="5" placeholder="답" />
+    </p>
+    <p>
+        <button class="reset">다시해보세요.</button>
+        <button class="cal">채점해보세요.</button>
+    </p>
+    <hr />
+    <h1 class="result">0초 경과</h1>
+    <h6 class="hint"></h6>
+</body>
+</html>

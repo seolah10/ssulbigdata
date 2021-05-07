@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var f = function () { };
+        var arr = [273, 3, 'Hello'];
+        var person = {
+            name: 'ssul',
+            age: 30,
+            eat: function (food) {
+                alert(this.age + '살 ' + this.name + '은 ' + food + '먹음');
+            },
+        };
+        person.eat('떡볶이');
+
+        document.write('person: ' + person + '<br>');
+        document.write('arr: ' + arr + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            width:500px; 
+            margin:0 auto;
+        }
+        ul li{
+            width:150px; height:100px;
+            text-align:center;
+            display:inline-block;
+            list-style:none;
+            background-color:red;
+        }
+        ul li:nth-child(1){
+            opacity:1 /* 1:불투명(default), 0:투명 */
+        }
+        ul li:nth-child(2){
+            opacity: .5; /* 0~1의 사잇값으로 투명도 조절 가능 */
+        }
+        ul li:nth-child(3){
+            opacity: .1;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>믿음 소망 사랑</li>
+        <li>믿음 소망 사랑</li>
+        <li>제일은 사랑</li>
+    </ul>
+</body>
+</html>

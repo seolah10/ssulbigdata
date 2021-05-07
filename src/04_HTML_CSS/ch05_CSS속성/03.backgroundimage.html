@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{
+            width:70%; height:400px;
+            margin:0 auto;
+            border:1px solid black;
+            background-image:url(moomin.png);
+        }
+        div:nth-child(1){
+            background-position:left top; /* default (0 0) */
+        }
+        div:nth-child(3){
+            background-position:center; /* (50% 50%) */
+        }
+        div:nth-child(5){
+            background-position:right top; /* (100% 0%) */
+        }
+        div:nth-child(7){
+            background-position:right bottom /* (100% 100%) */
+        }
+        div:nth-child(9){
+            background-repeat:no-repeat;
+        }
+        div:nth-child(11){ 
+            background-attachment:fixed; /* 브라우저의 left top을 사진의 left top과 맞춤*/
+        }
+    </style>
+</head>
+<body>
+    <div><h1>moomin</h1></div>
+    <br />
+    <div><h1>moomin</h1></div>
+    <br />
+    <div><h1>moomin</h1></div>
+    <br />
+    <div><h1>moomin</h1></div>
+    <br />
+    <div><h1>moomin</h1></div>
+    <br />
+    <div><h1>moomin</h1></div>
+    <br />
+</body>
+</html>

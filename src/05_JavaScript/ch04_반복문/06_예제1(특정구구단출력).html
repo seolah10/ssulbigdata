@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        do {
+            var su = Number(prompt('원하는 구구단을 입력하세요.: '));
+
+            if (isNaN(su) || su < 2 || su > 9) {
+                alert('2~9 사이의 숫자를 입력하세요.');
+            } else {
+                break;
+            }
+        } while (true);
+
+        document.write('<h3>' + su + '단 </h3>');
+
+        for (var i = 2; i <= 9; i++) {
+            document.write(su + '*' + i + '=' + (su * 1) + '<br>');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

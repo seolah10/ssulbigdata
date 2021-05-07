@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var num = 153.3359902; 
+
+        document.write(num + '<br>');
+        document.write('지수형: ' + num.toExponential(5) + '<br>'); // () 안에 표현하고 싶은 소수점 뒤의 자릿수
+        document.write('소수점 한자리까지: ' + num.toFixed(1) + '<br>');
+        document.write('한자리: ' + Math.round(num * 10) / 10 + '<br>');
+        document.write('숫자 5개만: ' + num.toPrecision(5));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

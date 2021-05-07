@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table#top{
+            background-color:lightgray;
+        }
+        td{
+            background-color:white;
+        }
+        table{
+            border:1px solid darkgray;
+        }
+    </style>
+</head>
+<body>
+    <form actiot="" method="get"> <!--get: 서버프로그램에 입력한 그대로 전송-->
+        <table id="top">
+            <caption>입력</caption>
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="id" size="5" />
+                    <input type="button" value="중복확인" />
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td>
+                    <input type="password" name="pw" />
+                </td>
+            </tr>
+            <tr>
+                <td>전화번호</td>
+                <td>
+                    <input type="tel" name="phone1" size="3" />-
+                    <input type="tel" name="phone2" size="3" />-
+                    <input type="tel" name="phone3" size="3" />
+                </td>
+            </tr>
+            <tr>
+                <td>경력</td>
+                <td>
+                    <input type="number" name="career" min="0" max="40" />
+                </td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td>
+                    <input type="email" name="email" />
+                </td>
+            </tr>
+            <tr>
+                <td>사진</td>
+                <td>
+                    <input type="file" name="filename" />
+                </td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="gender" value="m" checked="checked" />남
+                    <!--radio: 하나만 선택 가능 / checked:자동으로 체크되어있도록 설정-->
+                    <input type="radio" name="gender" value="f" />여 
+                    <!--두 항목의 name은 반드시 같게 설정해야 한다.-->
+                </td>
+            </tr>
+            <tr>
+                <td>사용언어</td>
+                <td><!--checkbox: 여러개 선택가능-->
+                    <input type="checkbox" name="lang" value="kor" checked="checked" />한국어
+                    <input type="checkbox" name="lang" value="eng" />영어
+                    <input type="checkbox" name="lang" value="chi" />중국어
+                </td>
+            </tr>
+            <tr>
+                <td>국적</td>
+                <td><!--select: combobox(하나만 선택 가능)-->
+                    <select name="nation">
+                        <option value="kor">대한민국</option>
+                        <option value="usa">미국</option>
+                        <option>중국</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>좋아하는 음식</td>
+                <td><!--multiple, size="3" : ctrl을 눌러 3개까지 다중 선택 가능-->
+                    <select name="food" multiple="multiple" size="3">
+                        <option>김치찌개</option>
+                        <option>제육덮밥</option>
+                        <option>초밥</option>
+                        <option>스테이크</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>자기소개</td>
+                <td>
+                    <textarea name="intro" cols="25" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>생일</td>
+                <td>
+                    <input type="date" name="birth" /> <!--달력 생성-->
+                </td>
+            </tr>
+            <tr>
+                <td>SNS url</td>
+                <td>
+                    <input type="url" name="sns" />
+                </td>
+            </tr>
+            <tr>
+                <td>좋아하는 색상<br />좋아하는 정도</td>
+                <td>
+                    <input type="color" name="color" /><br />0
+                    <input type="range" name="range" min="0" max="100" step="10" />100
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="입력" />
+                    <input type="reset" value="초기화" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html><

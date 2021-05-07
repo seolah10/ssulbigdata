@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Park",
+		"age": 20,
+		"email": "park@naver.com",
+		"address": "서울"
+	},
+	{
+		"name": "Jang",
+		"age": 30,
+		"email": "jang@naver.com",
+		"address": "천안"
+	}
+]

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var output = 'abcd@abcd@abc';
+        var splitOutput = output.split('@'); // @를 기준으로 글자쪼개기
+
+        document.write(splitOutput + '분리된 갯수: ' + splitOutput.length + '<br>');
+
+        var result = splitOutput.join(' '); // '@' 자리에 ' '대체 후 글자 다시 합치기
+
+        document.write(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

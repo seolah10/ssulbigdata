@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        p, h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px 40px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        /* 2단계 	[  xx  ] @  [ xx  ] = [답        ]
+                  Math.random()을 확용하여 사칙연산까지 임의로 출력
+         "채점해봐" 버튼을 클릭하면 정답 or 오답이 출력
+         "다시해봐" 버튼을 클릭하면 다시 reset */
+        $(document).ready(function () {
+            var opArray = ['+', '-', '*', '/'];
+
+            $('#n1').val(parseInt(Math.random() * 10));
+            $('#n2').val(parseInt(Math.random() * 10));
+            var opIdx = parseInt(Math.random() * 4); // 사칙연산 랜덤으로 뿌리기 
+            $('#operation').html('<b>' + opArray[opIdx] + '</b>'); 
+            $('#cal').click(function () {
+                var n1 = Number($('#n1').val());
+                var n2 = Number($('#n2').val());
+                var answerTemp = [n1 + n2, n1 - n2, n1 * n2, n1 / n2];
+                var answer = answerTemp[opIdx];
+
+                if (!isFinite(answer)) {
+                    $('.result').html('미안, 0으로 나누는 문제는 안돼.');
+                } else if ($('#answer').val != '' && $('#answer').val == answer) {
+                    $('.result').html('정답입니다!').css('color', 'blue');
+                } else {
+                    $('.result').html('틀렸습니다.').css('color', 'red');
+                }
+            });
+            $('#reset').click(function () {
+                $('#n1').val(parseInt(Math.random() * 10));
+                $('#n2').val(parseInt(Math.random() * 10));
+                opIdx = parseInt(Math.random() * 4);
+                $('#operation').html('<b>' + opArray[opIdx] + '</b>'); 
+                $('#answer').val('');
+                $('.result').text('');
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        2단계:
+        <input type="text" id="n1" size="5" readonly="readonly" /> 
+        <span id="operation"></span>
+        <input type="text" id="n2" size="5" /> =
+        <input type="text" id="answer" size="5" placeholder="답" />
+    </p>
+    <p>
+        <button id="reset">다시해보세요.</button>
+        <button id="cal">채점해보세요.</button>
+    </p>
+    <hr />
+    <h1 class="result"></h1>
+</body>
+</html>

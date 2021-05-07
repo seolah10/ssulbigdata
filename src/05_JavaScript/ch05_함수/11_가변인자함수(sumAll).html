@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="11.js"></script>
+    <script>
+        var sum = sumAll(); // -999 (매개변수가 없으면 -999로 리턴)
+        document.write('sumAll()= ' + sum + '<br>');
+
+        var sum = sumAll(1); // 매개변수가 1개 이상이면 누적값 리턴
+        document.write('sumAll(1)= ' + sum + '<br>');
+
+        var sum = sumAll(1, 2, 3, 4, 5); // 데이터의 총 합
+        document.write('sumAll(1,2,3,4,5)= ' + sum + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

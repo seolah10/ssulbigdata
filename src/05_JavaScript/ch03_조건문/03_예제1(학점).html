@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 점수를 입력받아 학점 출력하기 
+        var hakjum;
+
+        while (isNaN(hakjum) || hakjum <= 0 || hakjum > 4.5) {
+            hakjum = Number(prompt('학점(0~4.5)을 입력하세요'));
+        }
+        switch (Math.trunc(hakjum / 0.5)) {
+            case 9: case 8:
+                alert('A'); break;
+
+            case 7: case 6:
+                alert('B'); break;
+
+            case 5: case 4:
+                alert('C'); break;
+
+            case 3: case 2: case 3: case 4: 
+                alert('분발하세요.')
+        }
+
+        if (hakjum >= 4.0 && hakjum <= 4.5) {
+            document.write('A');
+        } else if (hakjum >= 3.0 && hakjum <= 4.0) {
+            document.write('B');
+        } else if (hakjum >= 2.0 && hakjum <= 3.0) {
+            document.write('C');
+        } else if (hakjum >= 0 && hakjum <= 2.0) {
+            document.write('분발하세요');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

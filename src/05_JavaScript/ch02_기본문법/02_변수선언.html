@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var varString;
+        document.write('1.varString type: ' + typeof (varString) + '-값: ' + varString + '<br>');
+
+        varString = 'ssul';
+        document.write('2.varString type: ' + typeof (varString) + '-값: ' + varString + '<br>');
+
+        varString = 10.5; // 숫자: ''안에 입력하지 않는다. 
+        document.write('3.varString type: ' + typeof (varString) + '-값: ' + varString + '<br>');
+
+        varString = true; // boolean: ''안에 입력하지 않는다.
+        document.write('4.varString type: ' + typeof (varString) + '-값: ' + varString + '<br>');
+
+        varString = function () { alert('함수 내부') };
+        document.write('5.varString type: ' + typeof (varString) + '-값: ' + varString + '<br>');
+
+        varString = { name: 'ssul', age: 30 };
+        document.write('6.varString type: ' + typeof (varString) + '-값: ' + varString + '<br>');
+
+        varString = [10, 'park', function () { }, true, { name: 'ssul' }, [1, 2, 3]];
+            // 배열에 어떤 자료형이든 올 수 있다.
+        document.write('7.varString type: ' + typeof (varString) + '-값: ' + varString + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

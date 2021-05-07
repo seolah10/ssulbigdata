@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /* 자바에서는 이렇게 했어요.
+        * int i = 170;
+        * i.toString() // 불가능
+        * Integer ii = 170; = Integer ii = new Integer(170);
+        * ii.toString();
+        */
+        var priNum = 153.57; // priNu = new Number(153.57) ?
+        var objNum = new Number(153.57);
+
+        document.write('priNum의 타입은 ' + typeof (priNum) + '<br>');
+        document.write('objNum의 타입은 ' + typeof (objNum) + '<br>');
+
+        // .toFixed(1) : 소수점 한자리까지만 표시되도록 고정 (반올림)
+        document.write('proNum.toFixed(1): ' + priNum.toFixed(1) + '<br>'); 
+        document.write('objNum.toFixed(1): ' + objNum.toFixed(1) + '<br>');
+
+        // .constructor : 생성자함수
+        document.write('proNum 생성자 함수: ' + priNum.constructor + '<br>');
+        document.write('objNum 생성자 함수: ' + objNum.constructor + '<br>');
+
+        if (priNum.constructor == objNum.constructor) {
+            document.write('priNum과 objNum의 저장된 타입은 같다.')
+        } else {
+            document.write('priNum과 objNum의 저장된 타입은 다르다.')
+        }
+
+        // 내장객체 Number에 메소드 추가
+        Number.prototype.method1 = function () {
+            alert('Number타입은 다 씀');
+        };
+        priNum.method1();
+        objNum.method1();
+
+        // objNum에 메소드 추가
+        objNum.method2 = function () {
+            alert('objNum만 씀');
+        };
+        // priNum.method2(); // priNum에서는 사용 불가 
+        objNum.method2();
+
+        priNum.method3 = function () {
+            alert('과연 될까?');
+        };
+        priNum.method3();
+        // priNum과 objNum은 사용법 같음. 단 priNum에는 메소드 추가 불가
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

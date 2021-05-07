@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        p, h1 {
+            text-align:center;
+        }
+        button {
+            padding:10px; margin: 10px 40px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        /* 수학 문제 풀기
+         * 1단계 	[  xx  ] +  [ xx  ] = [답        ]
+		[답  ]에 클릭하는 순간 입력이 가능하게 text가 사라진다.
+		"채점해봐" 버튼을 클릭하면 정답 or 오답이 출력
+		"다시해봐" 버튼을 클릭하면 다시 reset */
+
+        $(document).ready(function () {
+            $('input[name="n1"]').val(Math.trunc(Math.random() * 10)); // 0~9 난수
+            $('input[name="n2"]').val(Math.trunc(Math.random() * 10));
+            $('#cal').click(function () { // 정답 계산
+                var n1 = Number($('input[name="n1"]').val());
+                var n2 = Number($('input[name="n2"]').val());
+                var answer = n1 + n2;
+
+                if ($('input[name="answer"]').val() != '' &&
+                    $('input[name="answer"]').val() == answer) {
+                    $('.result').html('정답입니다!').css('color', 'blue');
+                } else {
+                    $('.result').html('틀렸습니다.').css('color', 'red');
+                }
+            }); // cal
+            $('#reset').click(function () {
+                $('input[name="n1"]').val(parseInt(Math.random() * 10));
+                $('input[name="n2"]').val(parseInt(Math.random() * 10));
+                $('input[name="answer"]').val('');
+                $('.result').html('');
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        1단계:
+        <input type="text" name="n1" size="5" readonly="readonly" /> +
+        <input type="text" name="n2" size="5" readonly="readonly" /> =
+        <input type="text" name="answer" size="5" placeholder="답"  />
+    </p>
+    <p>
+        <button id="reset">다시해보세요.</button>
+        <button id="cal">채점해보세요.</button>
+    </p>
+    <hr>
+    <h1 class="result"></h1>
+</body>
+</html>

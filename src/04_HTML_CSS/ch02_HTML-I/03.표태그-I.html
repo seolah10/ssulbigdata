@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{
+            background-color:#000000;
+        }
+        tr{
+            background-color:#FFFFFF;
+        }
+        td{
+            padding: 5px 10px 4px 9px /* 안여백 - 상 우 하 좌 */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption><h2>표제목</h2></caption>
+        <tr>
+            <td colspan="2">1행1,2열</td> <!--열병합-->
+            <td>1행2열</td>
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td rowspan="2">2,3행3열</td> <!--행병합-->
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+        </tr>
+    </table>
+    TEST
+</body>
+</html>

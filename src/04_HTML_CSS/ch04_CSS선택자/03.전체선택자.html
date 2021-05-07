@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{ /* 페이지 초기화: 전체 페이지 디자인 초기화 */
+          margin:0;
+          padding:0;
+          color:saddlebrown;
+        }
+        header, nav, section, footer {
+            width: 500px;
+            margin: 20px auto; /* 위를 제외한 나머지는 브라우저 크기에 맞춰 자동 계산됨 */
+            border: 1px solid gray;
+        }
+        nav ul{
+            overflow:hidden;
+        }
+        nav ul li{
+            list-style:none;
+            float:left; /* block타입 태그를 수평으로 */
+            padding:10px 20px; /* 10px 20px 10px 20px 상 우 하 좌*/
+        }
+        section{
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>00 주식회사</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>회사소개</li>
+            <li>서비스소개</li>
+            <li>고객센터</li>
+            <li>공지사항</li>
+        </ul>
+    </nav>
+    <section>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </section>
+    <footer>
+        <p>서울시 마포구 신촌로 94 그랜드빌딩 704호</p>
+    </footer>
+</body>
+</html>

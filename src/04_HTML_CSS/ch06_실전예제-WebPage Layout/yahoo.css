@@ -1,0 +1,47 @@
+﻿@font-face {
+    font-family: 'Amarante';
+    src:url('../yahoo/Amarante-Regular.ttf');
+}
+/* * * * * * 페이지 초기화 * * * * * */
+* {
+    margin:0; padding-top:0;
+    font-family: 'Amarante', 'Times New Roman', serif;
+}
+a {
+    text-decoration:none;
+    color:black;
+}
+li {
+    list-style:none;
+}
+/* * * * * * * * * * * * #header_nav * * * * * * * * * * * */
+#header_nav{
+    height:20px;
+    background-color:#2d1152;
+}
+#header_nav ul {
+    overflow:hidden;
+    margin-left:0;
+}
+#header_nav ul li {
+    float:left;
+    margin-right:20px;
+}
+#header_nav ul li a{
+    color:#FFFFFF;
+}
+#header_nav .survivalFootball {
+    float:right;
+}
+#header_nav .survivalFootball a {
+    color:#FFFFFF;
+}
+/* * * * * * * * * * * * #header_info * * * * * * * * * * * */
+
+/* * * * * * * * * * * * #content * * * * * * * * * * * */
+
+/* * * * * * * * * * * * #content의 #main * * * * * * * * * * * */
+
+/* * * * * * * * * * * * #content의 #main_banner * * * * * * * * * * * */
+
+/* * * * * * * * * * * * footer * * * * * * * * * * * */

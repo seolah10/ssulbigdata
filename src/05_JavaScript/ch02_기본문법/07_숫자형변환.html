@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        str = '100';
+        i = Number(str);
+        document.write("<h3>1. str='100'; i = Number(str); </h3>");
+        document.write('str type: ' + typeof (str) + '-값: ' + str + '<br>');
+        document.write('i type: ' + typeof (i) + '-값: ' + i + '<br>');
+
+        str = '100';
+        i = parseInt(str);
+        document.write("<h3>2. str='100'; i = parseInt(str); </h3>");
+        document.write('str type: ' + typeof (str) + '-값: ' + str + '<br>');
+        document.write('i type: ' + typeof (i) + '-값: ' + i + '<br>');
+
+        str = '100점';
+        i = Number(str);
+        document.write("<h3>3. str='100점'; i = Number(str); </h3>");
+        document.write('str type: ' + typeof (str) + '-값: ' + str + '<br>');
+        document.write('i type: ' + typeof (i) + '-값: ' + i + '<br>');
+
+        str = '100점';
+        i = parseInt(str);
+        document.write("<h3>4. str='100점'; i = parseInt(str); </h3>");
+        document.write('str type: ' + typeof (str) + '-값: ' + str + '<br>');
+        document.write('i type: ' + typeof (i) + '-값: ' + i + '<br>');
+
+        str = 'P';
+        i = Number(str);
+        document.write("<h3>5. str='P'; i = Number(str); </h3>");
+        document.write('str type: ' + typeof (str) + '-값: ' + str + '<br>');
+        document.write('i type: ' + typeof (i) + '-값: ' + i + '<br>');
+
+        str = 'P';
+        i = parseInt(str, 16);
+        document.write("<h3>6. str='P'; i = Number(str, 16); </h3>");
+        document.write('str type: ' + typeof (str) + '-값: ' + str + '<br>');
+        document.write('i type: ' + typeof (i) + '-값: ' + i + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

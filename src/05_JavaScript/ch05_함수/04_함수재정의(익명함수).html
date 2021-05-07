@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // furVar(); 익명함수는 정의 전 사용불가
+        var funVar = function () {
+            alert('함수 A');
+        };
+        funVar();
+
+        var funVar = function () { // 함수재정의
+            alert('함수 B');
+        };
+        funVar(); 
+    </script>
+</head>
+<body>
+
+</body>
+</html>

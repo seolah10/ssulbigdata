@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var student = { name: 'KIM' };
+        student['name'] = 'LEE'; // name 속성 변경 (KIM -> LEE)
+        student.name = 'PARK'; // name 속성 변경 (LEE -> PARK)
+        student.kor = 93; // kor 속성 추가
+        student.mat = 100; // mat 속성 추가
+        student.hobby = 'programming'; // hobby 속성 추가
+        student.toString = function () { // toString 추가 
+            var output = '';
+            for (var key in this) {
+                if (key != 'toString') {
+                    output += key + ': ' + this[key] + '<br>';
+                }
+            }
+            return output;
+        }; // toString
+        document.write(student); // 추가된 모든 속성 출력됨 
+
+        delete (student.hobby); hobby 속성 제거
+        document.write('<h2>속성 제거 후</h2>');
+        document.write(student);
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

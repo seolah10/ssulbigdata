@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:800px; 
+            margin:0 auto;
+        }
+        #wrap #header{
+            font-size:25px; 
+            font-weight:bold;
+            text-align:center;
+            border-bottom:1px solid #cccccc;
+        }
+        #wrap #content ul li a{
+            text-decoration:none;
+            color:blue;
+        }
+        #wrap #content ul li a:after{ /* 링크 선택자 */
+            content: ' - ' attr(href); /* 글씨 뒤에 링크주소 나타나게 하기 */
+        }
+        #content ul li:not(.web){ /* 부정 선택자 */
+            background-color:cornflowerblue; /* web class를 제외한 모든 li에 적용 */
+        }
+        a visited{ /* 링크선택자 */
+            color:red;
+        }
+        a active{ /* 링크 선택자 */
+            color:black;
+        }
+        /* block 태그를 수평으로 */
+        #footer ul{
+            border-top:1px solid #cccccc;
+            overflow:hidden;
+        }
+        #footer ul li{
+            float:left;
+            list-style:none;
+            padding:10px;
+            margin:5px 20px
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h2>Weekly Connect Website</h2>
+        </div>
+        <div id="content">
+            <ul>
+                <li><a href="http://www.naver.com" target="_blank">Naver</a></li>
+                <li><a href="http://www.google.com" target="_blank">Google</a></li>
+                <li><a href="http://www.daum.net" target="_blank">Daum</a></li>
+                <li class="web"><a href="http://www.yahoo.com" target="_blank">Yahoo</a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="0115_files/logo.png" alt="로고" /></li>
+                <li>서울시 영등포구 여의도동 111</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

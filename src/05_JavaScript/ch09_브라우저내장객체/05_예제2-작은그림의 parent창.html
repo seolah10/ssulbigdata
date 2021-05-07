@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var child;
+
+        function openBig() {
+            child = open('04_예제1-큰그림.html', '', 'width=500, height=610');
+
+            if (!child) {
+                alert('팝업차단 해제하세요.');
+            }
+        }
+        function closeBig() {
+            child.close();
+        };
+    </script>
+</head>
+<body>
+    <h2>작은그림의 parent창</h2>
+    <img src="ch09_img/small.jpg" alt="작은그림" 
+         onmouseover="openBig()" onmouseout="closeBig()">
+</body>
+</html>
